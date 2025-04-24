@@ -1,15 +1,15 @@
 Package: randPedPCA
 Type: Package
 Title: Fast PCA for Large Pedigrees
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
     person("Hanbin", "Lee", email = "hblee@umich.edu", role = "aut"),
     person("Hannes", "Becher", email = "h.becher@ed.ac.uk", role = "cre"),
     person("Ros", "Craddock", email="", role= "aut"),
     person("Gregor", "Gorjanc", email="", role= "aut"))
-Description: Compute PCAs of large pedigrees such as found
+Description: Carry out principal component analysis (PCA) of very large pedigrees such as found
     in breeding populations! This package, 'randPedPCA', exploits sparse matrices and randomised
-    linear algebra to deliver a gazillion-times speed-up compared to naive SVD 
+    linear algebra to deliver a gazillion-times speed-up compared to naive singular value decoposition (SVD)
     (and eigen decomposition).
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -20,11 +20,11 @@ RoxygenNote: 7.3.2
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2025-04-21 10:32:08 UTC; hbecher
+Packaged: 2025-04-24 10:10:30 UTC; hbecher
 Author: Hanbin Lee [aut],
   Hannes Becher [cre],
   Ros Craddock [aut],
   Gregor Gorjanc [aut]
 Maintainer: Hannes Becher <h.becher@ed.ac.uk>
 Repository: CRAN
-Date/Publication: 2025-04-24 07:40:02 UTC
+Date/Publication: 2025-04-24 11:50:06 UTC
