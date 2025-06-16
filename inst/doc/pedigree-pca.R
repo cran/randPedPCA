@@ -9,27 +9,27 @@ library(randPedPCA)
 
 ## -----------------------------------------------------------------------------
 # generate a pedigree object from the example dataset provided
-ped <- pedigree(pedMeta$fid,
-                pedMeta$mid,
-                pedMeta$id)
-pc01 <- rppca(ped, center=T)
-plot(pc01, col = pedMeta$population)
+ped <- pedigree(pedMeta2$fid,
+                pedMeta2$mid,
+                pedMeta2$id)
+pc01 <- rppca(ped, center=TRUE)
+plot(pc01, col = factor(pedMeta2$population))
 
 ## -----------------------------------------------------------------------------
 li <- sparse2spam(getLInv(ped))
-pc02 <- rppca(li, center = T)
-plot(pc02, col = pedMeta$population)
+pc02 <- rppca(li, center = TRUE)
+plot(pc02, col = factor(pedMeta2$population))
 
 ## -----------------------------------------------------------------------------
-pc03 <- rppca(pedLInv, center = T)
-plot(pc03, col = pedMeta$population)
+pc03 <- rppca(pedLInv2, center = TRUE)
+plot(pc03, col = factor(pedMeta2$population))
 
 ## ----echo=F, message=F, fig.dim = c(6, 3)-------------------------------------
 set.seed(123345) # set random seed as Hutch++ uses random numbers
-ttv <- hutchpp(pedLInv,num_queries = 100, center = T) # estimate
+ttv <- hutchpp(pedLInv2,num_queries = 100, center = TRUE) # estimate
 opar <- par(mfrow=c(1,2))
-plot(rppca(ped), main="Un-centred", col=pedMeta$population)
-plot(rppca(ped, center=T, totVar = ttv), main="Centred", col=pedMeta$population)
+plot(rppca(ped), main="Un-centred", col=factor(pedMeta2$population))
+plot(rppca(ped, center=TRUE, totVar = ttv), main="Centred", col=factor(pedMeta2$population))
 par(opar)
 
 ## -----------------------------------------------------------------------------
@@ -57,40 +57,40 @@ sum(diag(ac)) # exact value (would be too expensive to compute for a large pedig
 # Obtain centred estimate from L inverse using Hutch++
 li <- sparse2spam(getLInv(ped)) # generate L inverse and convert to spam format
 set.seed(123345) # set random seed as Hutch++ uses random numbers
-hutchpp(li,num_queries = 100, center = T) # estimate
+hutchpp(li,num_queries = 100, center = TRUE) # estimate
 
 ## -----------------------------------------------------------------------------
 summary(pc02)
 
 ## -----------------------------------------------------------------------------
-pc04 <- rppca(ped, center=F)
+pc04 <- rppca(ped, center=FALSE)
 summary(pc04)
 
 ## -----------------------------------------------------------------------------
-pc05 <- rppca(pedLInv, center=F, totVar=3521.534)
+pc05 <- rppca(pedLInv2, center=FALSE, totVar=3521.534)
 summary(pc05)
 
 ## -----------------------------------------------------------------------------
-pc07 <- rppca(ped, center=F, totVar=123)
+pc07 <- rppca(ped, center=FALSE, totVar=123)
 summary(pc07)
 
 ## -----------------------------------------------------------------------------
-pc06 <- rppca(ped, center=T) 
+pc06 <- rppca(ped, center=TRUE) 
 summary(pc06)
 
 ## -----------------------------------------------------------------------------
 # No proportions shown by default
-pc08 <- rppca(pedLInv, center=T) 
+pc08 <- rppca(pedLInv2, center=TRUE) 
 summary(pc08)
 
 ## -----------------------------------------------------------------------------
 # Only when estimate is supplied
-pc09 <- rppca(pedLInv, center=T, totVar=2673.6) 
+pc09 <- rppca(pedLInv2, center=TRUE, totVar=2673.6) 
 summary(pc09)
 
 ## -----------------------------------------------------------------------------
 # PC1 and PC2 are plotted by default
-plot(pc06, col=pedMeta$population, main="My pedigree PCA")
+plot(pc06, col=factor(pedMeta2$population), main="My pedigree PCA")
 # plot PC1 and PC3 instead
-plot(pc06, dims=c(1,3), col=pedMeta$population, main="My pedigree PCA,\ncustom PCs shown")
+plot(pc06, dims=c(1,3), col=factor(pedMeta2$population), main="My pedigree PCA,\ncustom PCs shown")
 
