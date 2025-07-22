@@ -1,5 +1,4 @@
-e63868c112fd1de4000fd45e45dfeae4 *DESCRIPTION
-df59c3b1989cab9837ae189537abe162 *LICENSE
+8c71d4432132642a7adc657ca3453faa *DESCRIPTION
 6c3c9e3d9ac7bf246af574f0b6294f33 *NAMESPACE
 a9e5827b2ae5e6d99a55ae6bccf76e96 *R/data.R
 aa8963f7963a52e107cce1711254e2e1 *R/downsample.R
@@ -10,7 +9,7 @@ cb3dda521822cf0d3e247f9c10a41790 *R/hutch.R
 be78df4a423a3b2a691a81c08fbb71a3 *R/plot3D.R
 22de9755eee1890a596ee3a2cc98cc1c *R/rppca.R
 ad60a0a1cdbcf1f61cc3f40647379f4f *R/utils.R
-5c561afacc8d53533b115bdc5c2d6e1a *build/vignette.rds
+a91e5a63bb20ef6b530f0762186e5875 *build/vignette.rds
 15d2b657068e36d90426b35e5cfae406 *data/pedLInv.rda
 dbf349bb4c9140effb19a0325efc90d0 *data/pedLInv2.rda
 d98c1b40b387ada969d6043f39fbdc58 *data/pedLInv4.rda
@@ -19,7 +18,7 @@ ad0c139e5e8e5f00a11945ae7e9797f8 *data/pedMeta2.rda
 1f60fe87e973430ace0aca6a65015b48 *data/pedMeta4.rda
 a35c9a0b0aa59c1120d97274e745a216 *inst/doc/pedigree-pca.R
 11b530ebe08fac278cf34835d47c2b53 *inst/doc/pedigree-pca.Rmd
-fc4ab518262022fe7322e3f25527ea6f *inst/doc/pedigree-pca.html
+2cc1789b4a340bcc181641306a704e56 *inst/doc/pedigree-pca.html
 ddeac7652acf4d77764f5167b036dc6f *man/dspc.Rd
 1691af3f0e1d1500c46c9f6947ff1e72 *man/getNumVectorsHutchinson.Rd
 8aad4e197b48d2386084739dcd9fe864 *man/hutchpp.Rd
@@ -38,7 +37,7 @@ f0db832a3bc6be6b2f374436cf1404fc *man/pedMeta2.Rd
 c9a8647e85eaaa8cd48c4db52bbc989b *man/rppca.Rd
 786c0e50c1172e7f9ba154f1af52d856 *man/sparse2spam.Rd
 e226da1e4d755b28f3b6b74709ce7da8 *tests/testthat.R
-54e5ff391f25fa9a1b75e8f33e95bcde *tests/testthat/Rplots.pdf
+08bd3007af4f724566a5c8155019069d *tests/testthat/Rplots.pdf
 4e1b6842ef8143dd8c6907c777fb9cdd *tests/testthat/test_rppca.R
 4b9b2bbb9661be0c57c80138e58a4d26 *tests/testthat/testthat-problems.rds
 11b530ebe08fac278cf34835d47c2b53 *vignettes/pedigree-pca.Rmd
